@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Arc-Script - Version 0.0.1 - Arc</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Arc documentation.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="arc-script/doc.html">Arc-Script - Version 0.0.1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/problem-motivation.html">Problem and Motivation</a></li><li class="chapter-item expanded "><a href="arc-script/getting-started.html">Getting Started</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref.html">Language Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/BNF.html">BNF</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/concepts.html">Base Language Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/names.html">Names</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/paths.html">Paths</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/modules.html">Modules</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/values.html">Values</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/literals.html">Literals</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/types.html">Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/scalars.html">Scalars</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/exprs.html">Expressions</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/patterns.html">Patterns</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/items.html">Items</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/globals.html">Globals</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/funs.html">Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/exceptions.html">Exception handling</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/type-aliases.html">Type Aliases</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/extern-funs.html">Extern Functions</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/extern-types.html">Extern Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/uses.html">Imports</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/enums.html">Enums</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/nominal-types.html">Nominal Types</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/keywords.html">Keywords</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/concepts.html">Dataflow Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/async-values.html">Asynchronous Values</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/streams.html">Streams</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/events.html">Events</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/futures.html">Futures</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/datetimes.html">Datetimes</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/durations.html">Durations</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/tasks.html">Tasks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/state.html">State</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/cells.html">Cells</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/sets.html">Sets</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/dictionaries.html">Dictionaries</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/appenders.html">Appenders</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/ports.html">Ports</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/timers.html">Timers</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/timeouts.html">Timeouts</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/termination.html">Termination</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/keys.html">Keys</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/pipelines.html">Pipelines</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/piping-operator.html">Piping Operator</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/collections/concepts.html">Collection Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/collections/streamable.html">Streamable Sources</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/collections/streamable.html">Collectable Sinks</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/discussion.html">Discussion</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="arc-mlir/lang-ref.html">Arc-MLIR</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Arc</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#arc-script" id="arc-script">Arc-Script</a></h1>
+<p><strong>Arc-Script</strong> is a programming language for data analytics which is based on the concepts of <strong>dataflow programming</strong> and <strong>collection programming</strong>.</p>
+<h2><a class="header" href="#dataflow-programming" id="dataflow-programming">Dataflow programming</a></h2>
+<p><strong>Dataflow programming</strong> is about decomposing complicated problems into independent pipelined <strong>tasks</strong> (e.g., <code>Map</code>, <code>Filter</code>, <code>Reduce</code>). Each task reads data from some input, processes it, and forwards its results to some output. Furthermore, as all tasks work <strong>incrementally</strong> and <strong>concurrently</strong>, dataflow programs can exhibit pipeline parallelism. Together, tasks form a <strong>dataflow graph</strong> which could for example look like this:</p>
+<pre><code class="language-text">--&gt; Filter(fun(x): x % 2) --&gt; Map(fun(x): x + 1) --&gt; Reduce(fun(a, b): a + b) --&gt;
+</code></pre>
+<h2><a class="header" href="#collection-programming" id="collection-programming">Collection programming</a></h2>
+<p><strong>Collection programming</strong> is about writing programs that are oriented around various types of high-level collections (e.g., Graphs, Streams, Tensors, Relations, DataFrames, DataSets). A <strong>collection</strong> is in a broader sense an abstract data type which allows programmers to model algorithms that involve an arbitrary amount of data points. By being abstract, collections are able to hide complexity about implementation details. Programmers therefore do not need to think about how data inside collections is stored, partitioned, secured, kept consistent, and how operations on it are parallelised.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+                            <a rel="next" href="arc-script/problem-motivation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+                    <a rel="next" href="arc-script/problem-motivation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

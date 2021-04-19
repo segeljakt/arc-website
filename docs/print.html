@@ -1,0 +1,1291 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Arc</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Arc documentation.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="arc-script/doc.html">Arc-Script - Version 0.0.1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/problem-motivation.html">Problem and Motivation</a></li><li class="chapter-item expanded "><a href="arc-script/getting-started.html">Getting Started</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref.html">Language Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/BNF.html">BNF</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/concepts.html">Base Language Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/names.html">Names</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/paths.html">Paths</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/modules.html">Modules</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/values.html">Values</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/literals.html">Literals</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/types.html">Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/scalars.html">Scalars</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/exprs.html">Expressions</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/patterns.html">Patterns</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/items.html">Items</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/globals.html">Globals</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/funs.html">Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/exceptions.html">Exception handling</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/type-aliases.html">Type Aliases</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/extern-funs.html">Extern Functions</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/extern-types.html">Extern Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/uses.html">Imports</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/enums.html">Enums</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/base/nominal-types.html">Nominal Types</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/keywords.html">Keywords</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/concepts.html">Dataflow Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/async-values.html">Asynchronous Values</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/streams.html">Streams</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/events.html">Events</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/futures.html">Futures</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/datetimes.html">Datetimes</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/durations.html">Durations</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/tasks.html">Tasks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/state.html">State</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/cells.html">Cells</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/sets.html">Sets</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/dictionaries.html">Dictionaries</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/appenders.html">Appenders</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/ports.html">Ports</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/timers.html">Timers</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/timeouts.html">Timeouts</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/termination.html">Termination</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/keys.html">Keys</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/pipelines.html">Pipelines</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/dataflow/piping-operator.html">Piping Operator</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/collections/concepts.html">Collection Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc-script/lang-ref/collections/streamable.html">Streamable Sources</a></li><li class="chapter-item expanded "><a href="arc-script/lang-ref/collections/streamable.html">Collectable Sinks</a></li></ol></li><li class="chapter-item expanded "><a href="arc-script/discussion.html">Discussion</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="arc-mlir/lang-ref.html">Arc-MLIR</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Arc</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#arc-script" id="arc-script">Arc-Script</a></h1>
+<p><strong>Arc-Script</strong> is a programming language for data analytics which is based on the concepts of <strong>dataflow programming</strong> and <strong>collection programming</strong>.</p>
+<h2><a class="header" href="#dataflow-programming" id="dataflow-programming">Dataflow programming</a></h2>
+<p><strong>Dataflow programming</strong> is about decomposing complicated problems into independent pipelined <strong>tasks</strong> (e.g., <code>Map</code>, <code>Filter</code>, <code>Reduce</code>). Each task reads data from some input, processes it, and forwards its results to some output. Furthermore, as all tasks work <strong>incrementally</strong> and <strong>concurrently</strong>, dataflow programs can exhibit pipeline parallelism. Together, tasks form a <strong>dataflow graph</strong> which could for example look like this:</p>
+<pre><code class="language-text">--&gt; Filter(fun(x): x % 2) --&gt; Map(fun(x): x + 1) --&gt; Reduce(fun(a, b): a + b) --&gt;
+</code></pre>
+<h2><a class="header" href="#collection-programming" id="collection-programming">Collection programming</a></h2>
+<p><strong>Collection programming</strong> is about writing programs that are oriented around various types of high-level collections (e.g., Graphs, Streams, Tensors, Relations, DataFrames, DataSets). A <strong>collection</strong> is in a broader sense an abstract data type which allows programmers to model algorithms that involve an arbitrary amount of data points. By being abstract, collections are able to hide complexity about implementation details. Programmers therefore do not need to think about how data inside collections is stored, partitioned, secured, kept consistent, and how operations on it are parallelised.</p>
+<h1><a class="header" href="#problem-and-motivation" id="problem-and-motivation">Problem and Motivation</a></h1>
+<p>The vision of Arc-Script is a <em>language</em> with support processing multiple types of collections. This is in contrast to most distributed systems languages and frameworks for data analytics which only support a limited number of collection types.</p>
+<p><img src="arc-script/./DSLs.png" alt="DSLs" /></p>
+<p>Arc-Script's level of abstraction is lower than query-languages but higher than systems languages. In particular, Arc-Scripts can contain sequential (non-declarative) code, has pass-by-value semantics, and are able to compile into and intermix with systems languages and streaming runtimes. Additionally, Arc-Script's generality level is broader than query-languages but narrower than general-purpose languages. Like query-languages, Arc-Script programs are about programming with high-level operators and collections, but unlike query-languages, these concepts can also be naturally expressed inside Arc-Script programs. This approach gives users more flexibility and allows programs to be optimised at a finer level of granularity, while removing potential complexity introduced by systems languages. Query languages are inevitably going to be more useful for certain end-users and applications. Despite this fact, query languages can see some benefit by translating into Arc-Script code because of opportunities for optimisation.</p>
+<h1><a class="header" href="#getting-started" id="getting-started">Getting Started</a></h1>
+<p>This section explains how to create an Arc-Script project.</p>
+<h2><a class="header" href="#setup" id="setup">Setup</a></h2>
+<p>Arc-Script is meant to be used alongside Rust, therefore the Rust compiler and Cargo package-manager must be installed on your computer, see this <a href="https://doc.rust-lang.org/cargo/getting-started/installation.html">tutorial</a>, or just run:</p>
+<pre><code class="language-sh"># Install cargo
+curl https://sh.rustup.rs -sSf | sh
+</code></pre>
+<p>Then, download the arc-script template project:</p>
+<pre><code class="language-sh">git clone https://github.com/cda-group/arc-template
+</code></pre>
+<h2><a class="header" href="#project-layout" id="project-layout">Project Layout</a></h2>
+<p>The layout of the project is as follows:</p>
+<pre><code class="language-text">$ ls --recursive
+
+arc-template/  # Project directory
+  Cargo.toml   # Config file
+  build.rs     # Build file
+  src/         # Source directory
+    main.rs    # Main file of Rust
+    main.arc   # Main file of Arc-Script
+  target/      # Build artefacts
+</code></pre>
+<h2><a class="header" href="#arc-script-1" id="arc-script-1">Arc-Script</a></h2>
+<p>Arc-Script code is placed in files with the <code>.arc</code> extension. Our Arc-Script contains a basic <code>Identity</code> task and a <code>test</code> function for using it. This file will be automatically compiled into Rust source that is placed in the <code>target/</code> directory. The artefacts can then be included from regular Rust files inside a Rust crate. For info about the Arc-Script language, please refer to the language reference.</p>
+<pre><code class="language-text">$ cat arc-template/src/main.arc
+
+fun pipe(stream: ~i32 by unit) -&gt; ~i32 by unit {
+    stream |&gt; Identity()
+}
+
+task Identity() ~i32 by unit -&gt; ~i32 by unit {
+    on event =&gt; emit event
+}
+</code></pre>
+<h2><a class="header" href="#rust" id="rust">Rust</a></h2>
+<p>Our Rust code sets up an Arcon pipeline, which contains the Arc-Script pipeline, and passes it a vector of integers as input. The resulting stream is displayed in the console. Note that this code will in the future be abstracted away when building applications with Arc-Script.</p>
+<pre><pre class="playground"><code class="language-rust">$ cat arc-template/src/main.rs
+
+use arc_script::arcorn::operators::*;
+use arcon::prelude::{ArconTime, Pipeline};
+
+mod script {
+    // Include and encapsulate the Arc-Script inside a Rust module
+    arc_script::include!(&quot;src/main.rs&quot;);
+}
+
+fn main() {
+    // Setup an arcon pipeline
+    let pipeline = Pipeline::default();
+
+    // Create a data stream source
+    let data = vec![1, 2, 3];
+
+    let stream = pipeline
+        .collection(data, |conf| {
+            conf.set_arcon_time(ArconTime::Process);
+        })
+        .convert();
+
+    // Connect the data stream with the arc-script
+    let stream = script::pipe(stream);
+
+    // Connect the data stream with a sink
+    let mut pipeline = stream.to_console().build();
+
+    // Execute the pipeline
+    pipeline.start();
+    pipeline.await_termination();
+}
+</code></pre></pre>
+<p>Any code written inside Rust can also be included into the Arc-Script. This will be covered in the language reference.</p>
+<h2><a class="header" href="#project-dependencies" id="project-dependencies">Project Dependencies</a></h2>
+<p>The required project dependencies are as follows:</p>
+<pre><code class="language-toml">$ cat arc-template/Cargo.toml
+
+[package]
+name = &quot;arc-script-template&quot;
+version = &quot;0.0.0&quot;
+edition = &quot;2018&quot;
+
+# Dependencies for running arc-scripts:
+[dependencies]
+arc-script = { version = &quot;=0.0.0&quot;, git = &quot;https://github.com/cda-group/arc&quot; }
+arcon      = { git = &quot;https://github.com/segeljakt/arcon&quot; }
+prost      = { version = &quot;0.7.0&quot; }
+
+# Dependencies for building arc-scripts:
+[build-dependencies]
+arc-script-build = { version = &quot;=0.0.0&quot;, git = &quot;https://github.com/cda-group/arc&quot; }
+</code></pre>
+<h2><a class="header" href="#build-file" id="build-file">Build File</a></h2>
+<p>A build-file is also provided to re-compile the Arc-Script source when it changes.</p>
+<pre><pre class="playground"><code class="language-rust">$ cat arc-template/build.rs
+
+use arc_script_build::Builder;
+
+fn main() {
+    // This pre-builds any file in the crate whose filename is `main.arc`.
+    Builder::default().build();
+}
+</code></pre></pre>
+<h1><a class="header" href="#language-reference" id="language-reference">Language Reference</a></h1>
+<p>The following sub-sections will go through each concept in Arc-Script.</p>
+<p>In the following sections, we will explain each concept by formally defining its syntax and by informally discussing its semantics. Syntax will be explained using a Regex-based variation of the BNF grammar where:</p>
+<ul>
+<li><code>+</code> and <code>*</code> denote repetition.</li>
+<li><code>?</code> is for optional rules.</li>
+<li><code>(</code> <code>)</code> indicates grouping.</li>
+<li><code>|</code> is for alternation.</li>
+<li><code>[</code> <code>]</code> for is character-alternation (e.g., <code>[abc]</code>).</li>
+<li><code>-</code> is for ranges (e.g., <code>a-zA-Z</code>).</li>
+<li><code>.</code> is for matching any character.</li>
+<li><code>\</code> is for escaping characters.</li>
+<li>Rules are written as uppercase (e.g., <code>Rule</code>).</li>
+<li>Symbols are enclosed with single-quotes (e.g., <code>'symbol'</code>).</li>
+</ul>
+<h1><a class="header" href="#base-language" id="base-language">Base Language</a></h1>
+<p>Arc-Script programs are compiled into efficient Rust source code. To this end, a large part of Arc-Script largely resembles Rust. The base of concepts Arc-Script are:</p>
+<ul>
+<li><a href="arc-script/lang-ref/base/arc-script/names.html"><strong>Names</strong></a></li>
+<li><a href="arc-script/lang-ref/base/arc-script/paths.html"><strong>Paths</strong></a></li>
+<li><a href="arc-script/lang-ref/base/arc-script/modules.html"><strong>Modules</strong></a></li>
+<li><a href="arc-script/lang-ref/base/arc-script/values.html"><strong>Values</strong></a></li>
+<li><a href="arc-script/lang-ref/base/arc-script/types.html"><strong>Types</strong></a></li>
+<li><a href="arc-script/lang-ref/base/arc-script/expressions.html"><strong>Expressions</strong></a></li>
+<li><a href="arc-script/lang-ref/base/arc-script/patterns.html"><strong>Patterns</strong></a></li>
+<li><a href="arc-script/lang-ref/base/arc-script/items.html"><strong>Items</strong></a></li>
+</ul>
+<h1><a class="header" href="#names" id="names">Names</a></h1>
+<p>A <strong>name</strong> is a symbolic identifier which can be assigned to a <strong>module</strong>, <strong>variable</strong>, or <strong>item</strong>.</p>
+<pre><code>Name ::= [a-zA-Z_][a-zA-Z_0-9]*
+</code></pre>
+<p>Names are <em>lexically scoped</em>, and can <em>shadow</em> each other.</p>
+<h1><a class="header" href="#paths" id="paths">Paths</a></h1>
+<p>A <strong>path</strong> is a list of names which point to an <strong>item</strong> in the module hierarchy.</p>
+<pre><code class="language-text">Path ::= '::'? (Name '::')* Name
+</code></pre>
+<p>Paths can be both <em>relative</em> and <em>absolute</em>. Absolute paths are absolute with respect to the root of the module hierarchy. Relative paths are relative with respect to the current namespace.</p>
+<pre><code class="language-text">mod1::mod2::MyItem   # Relative path
+::mod1::mod2::MyItem # Absolute path
+</code></pre>
+<h1><a class="header" href="#modules" id="modules">Modules</a></h1>
+<p>A <strong>module</strong> is a named unit of encapsulation which may contain items and other modules.</p>
+<pre><code class="language-text">Module ::= 'mod' Name '{' (Item | Module)+ '}'
+</code></pre>
+<p>Modules form a hierarchy through nesting. This hierarchy is in addition tied to the file system hierarchy (similar to Rust):</p>
+<pre><code class="language-text">my-project/
+  src/
+    main.arc     # :: (root module)
+    foo/
+      mod.arc    # ::foo
+      bar/
+        mod.arc  # ::foo::bar
+    baz/
+      mod.arc    # ::foo::baz
+</code></pre>
+<h1><a class="header" href="#values" id="values">Values</a></h1>
+<p>A <strong>value</strong> is the result of evaluating an <strong>expression</strong>.</p>
+<pre><code class="language-text">Value ::=
+  | Literal                                         # Literal-value
+  | '{' (Name ':' Value ',')+ '}'                   # Record-value
+  | '(' (Value ',')+ ')'                            # Tuple-value
+  | 'fun' '(' (Pattern ':' Type ',')+ ')' ':' Expr  # Lambda-value
+  | Value? '..' ('='? Value)?                       # Range-value
+  | Path                                            # Item-value
+  | Path '(' Value ')'                              # Enum-value
+</code></pre>
+<h2><a class="header" href="#examples" id="examples">Examples</a></h2>
+<p>Some examples of different values:</p>
+<pre><code>{x:5, y:&quot;foo&quot;} # Record
+(5, &quot;foo&quot;)     # Tuple
+fun(x): x+1    # Lambda
+0..100         # Exclusive Range
+0..=100        # Inclusive Range
+</code></pre>
+<h1><a class="header" href="#literals" id="literals">Literals</a></h1>
+<p>A <strong>literal</strong> is a value represented as-is in the source code.</p>
+<pre><code class="language-text">Literal ::=
+  | 'true' | 'false'    # Literal boolean
+  | 'unit'              # Literal unit
+  | '\'' . '\''         # Literal character
+  | '&quot;[^\&quot;]&quot;'           # Literal string
+  | [1-9][0-9]*         # Literal integer
+  | [1-9][0-9]*.[0-9]*  # Literal floating point
+  | ..
+</code></pre>
+<h1><a class="header" href="#types" id="types">Types</a></h1>
+<p>A <strong>type</strong> is a syntactic construct which represents a set of <strong>values</strong> with common behavior. All expressions in Arc-Script have a statically inferred type which indicates what set of values they evaluate into. Items types such as functions need to be annotated with types in their signature, but can be generic.</p>
+<pre><code class="language-text">Type ::=
+  | Scalar                              # Scalar-type
+  | '{' '(' Name ':' Type ',')+ '}'     # Record-type
+  | '(' (Type ',')+ ')'                 # Tuple-type
+  | 'fun' '(' (Type ',')+ ')' ':' Type  # Function-type
+  | Type? '..' ('='? Type)?             # Range-type
+  | Path ('[' (Type ',')* ']')?         # Item-type (with optional type parameters)
+</code></pre>
+<h2><a class="header" href="#examples-1" id="examples-1">Examples</a></h2>
+<p>Some examples of different types:</p>
+<pre><code class="language-text">{x:i32, y:str}  # Record-type
+(i32, str)      # Tuple-type
+fun(x:i32): i32 # Lambda-type
+i32..i32        # Exclusive Range-type
+i32..=i32       # Inclusive Range-type
+</code></pre>
+<h1><a class="header" href="#scalars" id="scalars">Scalars</a></h1>
+<p>A <strong>scalar</strong> is a primitive type which has a direct correspondence to <strong>literals</strong>.</p>
+<pre><code class="language-text">Scalar ::=
+  | 'i8'  | 'i16'  | 'i32' | 'i64'  # Machine integers
+  | 'u8'  | 'u16'  | 'u32' | 'u64'  # Machine unsigned integers
+  | 'f16' | 'bf16' | 'f32' | 'f64'  # Machine floating points
+  | 'bignum'                        # Arbitrary sized integer
+  | 'bool'                          # Booleans
+  | 'unit'                          # Unit
+  | 'char' | 'str'                  # UTF8-encoded chars and strings
+  | ..
+</code></pre>
+<h1><a class="header" href="#expressions" id="expressions">Expressions</a></h1>
+<p>An <strong>expression</strong> is syntactic construct which can be evaluated into a <strong>value</strong>. Evaluation is always <em>eager</em>.</p>
+<pre><code class="language-text">Expr ::=
+  | Name                                                       # Variable reference
+  | Path                                                       # Item reference
+  | Literal                                                    # Literal
+  | '{' (Name ':' Expr ',' )+ '}'                              # Record-construction
+  | '(' (Expr',')+ ')'                                         # Tuple-construction
+  | Expr? '..' ('='? Expr)?                                    # Range-construction
+  | Expr BinOp Expr                                            # Binary operation
+  | 'var' Pattern (':' Type)? '=' Expr                         # Mutable-binding
+  | 'val' Pattern (':' Type)? '=' Expr                         # Immutable-binding
+  | 'if' Expr '{' Expr '}' ('else' '{' Expr '}')?              # If-else-expression
+  | 'match' Expr '{' (Pattern ('if' Expr)? '=&gt;' Expr ',')+ '}' # Match-expression
+  | 'for' Pattern 'in' Expr '{' Expr '}'                       # For-loop
+  | 'while' Expr '{' Expr '}'                                  # While-loop
+  | 'loop' '{' Expr '}'                                        # Infinite loop
+  | 'break' | 'continue' | 'return'                            # Control flow
+  | 'try' Expr 'catch' Pattern '=&gt;' Expr ('finally' Expr)?     # Exceptions
+  | '[' Expr 'for' Pattern 'in' Expr ('if' Expr)* ']'          # Comprehension
+  | 'fun' '(' (Pattern ':' Type ',')+ ')' ':' Expr             # Lambda construction
+  | '-' Expr                                                   # Negation
+  | 'not' Expr                                                 # Logical
+  | Expr '(' (Expr ',')* ')'                                   # Function call
+  | Path '(' Expr ')'                                          # Enum-variant construction
+  | Expr '.' Name                                              # Field projection
+  | Expr '.' [0-9]+                                            # Index projection
+  | Expr 'as' Type                                             # Type cast
+
+</code></pre>
+<p>The binary operators are as follows:</p>
+<pre><code class="language-text">BinOp ::=
+  | '+'   | '-'  | '*'   | '/'    | '**'  | '%'     # Arithmetic 
+  | '=='  | '!=' | '&lt;'   | '&gt;'    | '&lt;='  | '&gt;='    # Equality and Relational
+  | 'and' | 'or' | 'xor' | 'band' | 'bor' | 'bxor'  # Logical and Bitwise
+  | ';'                                             # Sequential composition
+</code></pre>
+<h1><a class="header" href="#patterns" id="patterns">Patterns</a></h1>
+<p>A <strong>pattern</strong> is a syntactic construct for deconstructing a <strong>value</strong> and binding its parts to variables.</p>
+<pre><code class="language-text">Pattern ::=
+  | Name                                # Variable binding
+  | Literal                             # Literal comparison
+  | '{' (Name (':' Pattern)? ',')+ '}'  # Record deconstruction
+  | '(' (Pattern ',')+ ')'              # Tuple deconstruction
+  | Pattern? '..' ('='? Pattern)?       # Range deconstruction
+  | Path '(' Pattern ')'                # Variant deconstruction
+  | Pattern 'or' Pattern                # Alternation
+</code></pre>
+<h2><a class="header" href="#example" id="example">Example</a></h2>
+<p>Pattern matching on <strong>tuples</strong>:</p>
+<pre><code>val a = (1, 2, 3);
+val (x0, x1, x2) = a;
+</code></pre>
+<p>Pattern matching on <strong>records</strong>, which also creates an alias <code>my_alias</code>:</p>
+<pre><code>val a = {x0:0, x1:2, x2:3};
+val {x0, x1, x2: my_alias};
+</code></pre>
+<h1><a class="header" href="#items" id="items">Items</a></h1>
+<p>An <strong>item</strong> is a named top-level definition which can be referenced by-path. The ordering of how items are defined in the source code insignificant.</p>
+<pre><code class="language-text">Item ::=
+  | 'val' Name '=' Value ';'                                       # Global immutable value
+  | 'fun' Name '(' (Name ':' Type ',')* ')' ':' Type '{' Expr '}'  # Function definition
+  | 'type' Name '=' Type ';'                                       # Type alias
+  | 'extern' 'fun' Name '(' (Name ':' Type ',')* ')' ':' Type ';'  # Extern function declaration
+  | 'enum' Name '{' (Name '(' Type ')' ',')* '}'                   # Enumerated type (Sum-type)
+  | 'enum' Name '(' Type ')'                                       # Nominal type
+  | 'use' Path '(' 'as' Name ')'?;                                 # Import (and optionally alias)
+  | ..
+</code></pre>
+<h1><a class="header" href="#globals" id="globals">Globals</a></h1>
+<p>A <strong>global</strong> is an <em>immutable</em> variable which can be referenced by-path.</p>
+<pre><code class="language-text">Item ::=
+  | 'val' Name '=' Value ';'  # Global
+  | ...
+</code></pre>
+<h2><a class="header" href="#example-1" id="example-1">Example</a></h2>
+<p>The following code initializes two global variables, one by a literal, and another by calling a function.</p>
+<pre><code class="language-text">val pi = 3.14;
+val fib10 = fib(10);
+
+fun test() {
+    print(pi);
+    print(fib10);
+}
+</code></pre>
+<h1><a class="header" href="#functions" id="functions">Functions</a></h1>
+<p>A <strong>function</strong> is your ordinary function. It takes some parameters and evaluates its body into a value.</p>
+<pre><code class="language-text">Item ::=
+  | 'fun' Name '(' (Name ':' Type ',')* ')' ':' Type '{' Expr '}'  # Function definition
+  | ...
+
+Expr ::=
+  | Expr '(' (Expr ',')* ')'                                       # Function call syntax
+  | ...
+</code></pre>
+<h2><a class="header" href="#examples-2" id="examples-2">Examples</a></h2>
+<p>The following code shows how to define the Fibonacci function.</p>
+<pre><code class="language-text">fun fib(n: i32): i32 {
+    match n {
+        0 =&gt; 0,
+        1 =&gt; 1,
+        n =&gt; fib(n-2) + fib(n-1)
+    }
+}
+
+fun test() {
+    println(fib(10));
+}
+</code></pre>
+<h1><a class="header" href="#exception-handling" id="exception-handling">Exception handling</a></h1>
+<ul>
+<li>Todo</li>
+</ul>
+<h1><a class="header" href="#type-aliases" id="type-aliases">Type Aliases</a></h1>
+<p>A <strong>type alias</strong> is a purely cosmetic alias of a type.</p>
+<pre><code class="language-text">Item ::=
+  | 'type' Name '=' Type ';'  # Type alias
+  | ...
+</code></pre>
+<h2><a class="header" href="#example-2" id="example-2">Example</a></h2>
+<p>The following code defines type aliases for representing lines on a two-dimensional plane, and a function for calculating the length of a line.</p>
+<pre><code class="language-text">type Num = i32;
+type Point = {x: Num, y: Num}
+type Line = {start: Point, end: Point}
+
+fun length(line: Line): i32 {
+    val a = line.start.x - line.end.x;
+    val b = line.start.y - line.end.y;
+    sqrt(a ** 2 + b ** 2)
+}
+
+fun test() {
+    val p0 = { x: 0, y: 1 };
+    val p1 = { x: 5, y: 9 };
+    val line = { start: p0, end: p1 };
+    print(length(line));
+}
+</code></pre>
+<h1><a class="header" href="#extern-functions" id="extern-functions">Extern Functions</a></h1>
+<p>An <strong>extern function</strong> is a function-declaration whose implementation is defined externally, outside of Arc-Script, inside Rust.</p>
+<pre><code class="language-text">Item ::=
+  | 'extern' 'fun' Name '(' (Name ':' Type ',')* ')' ':' Type ';'  # Extern function declaration
+  | ...
+</code></pre>
+<h2><a class="header" href="#example-3" id="example-3">Example</a></h2>
+<p>The following code declares an extern function <code>add</code> for adding two numbers.</p>
+<pre><code class="language-text"># src/my_script.arc
+
+extern fun add(a:i32, b:i32): i32;
+
+fun test(): i32 {
+    add(1, 2) # 1+2 = 3
+}
+</code></pre>
+<p>The implementation is defined inside of Rust, for example:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// src/main.rs
+
+#[arc_script::include(&quot;my_script.arc&quot;)]
+mod my_script {
+    // Anything in this module's namespace is visible to my_script.arc.
+    fn add(a:i32, b:i32) -&gt; i32 {
+        a + b
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h1><a class="header" href="#extern-types" id="extern-types">Extern types</a></h1>
+<p>An <strong>extern type</strong> is an abstract data type with methods whose implementations are defined in Rust.</p>
+<pre><code class="language-text">Item ::=
+  | 'extern' 'type' Name '(' (Name ':' Type ',')* ')' '{' # Abstract Data Type (ADT)
+      ('fun' Name '(' (Type ',')* ')' ':' Type ';')*      # Externally implemented method
+    } 
+  | ...
+</code></pre>
+<h2><a class="header" href="#example-4" id="example-4">Example</a></h2>
+<p>The following code shows how to define an extern type <code>DataFrame</code> in Arc-Script.</p>
+<pre><code class="language-text"># src/my_script.arc
+
+extern type DataFrame() {
+    fun sum() -&gt; i32;
+}
+
+fun test() {
+    val df = DataFrame();
+    # ...
+    df.sum();
+}
+</code></pre>
+<p>Here is one way of implementing the type in Rust.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// src/main.rs
+
+#[arc_script::include(&quot;my_script.arc&quot;)]
+mod my_script {
+    #[derive(Clone)]
+    pub struct DataFrame {
+        concrete: Rc&lt;RefCell&lt;polars::DataFrame&gt;&gt;,
+    }
+
+    impl DataFrame {
+        pub fn new() -&gt; DataFrame { /* ... */ }
+        pub fn sum(self) -&gt; i32 { /* ... */ }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h1><a class="header" href="#uses" id="uses">Uses</a></h1>
+<p>A <strong>use</strong>-item imports a name into the current namespace and optionally aliases it.</p>
+<pre><code class="language-text">Item ::=
+  | 'use' Path ('as' Name)?;  # Import (and optionally alias)
+  | ...
+</code></pre>
+<h2><a class="header" href="#examples-3" id="examples-3">Examples</a></h2>
+<p>The following code creates a <code>Person</code>-type and an alias and use it as a <code>Human</code>.</p>
+<pre><code class="language-text">type Person = { name: str, age: i32 }
+
+use Person as Human; # Creates an alias
+
+fun print_name(human: Human): str {
+    print(human.name)
+}
+
+fun test() {
+    val person: Person = { name: str, age: i32 };
+    print_name(person)
+}
+</code></pre>
+<h1><a class="header" href="#enums" id="enums">Enums</a></h1>
+<p>An <strong>enum</strong> is a nominal type which is a disjoint set (tagged union) of values. Each item of the disjoint set is referred to as a <strong>variant</strong>.</p>
+<pre><code class="language-text">Item ::=
+  | 'enum' Name '{' (Name '(' Type ')' ',')* '}' # Enumerated type (Sum-type)
+  | ...
+
+Expr ::=
+  | Path '(' Expr ')'  # Enum-variant consruction
+  | ...
+</code></pre>
+<h2><a class="header" href="#examples-4" id="examples-4">Examples</a></h2>
+<p>In the following code, we create a <code>Shape</code>-enum type which can hold <code>Rectangle</code>-shapes and <code>Circle</code>-shapes. Then, we define function <code>area</code> is defined for calculating the area of a <code>Shape</code>. Note how pattern matching is required to extract values from enums.</p>
+<pre><code class="language-text">enum Shape {
+    Rectangle({ width: f32, height: f32 }),
+    Circle({ radius: f32 }),
+}
+
+fun area(shape: Shape): f32 {
+    match shape {
+        Shape::Rectangle({width, height}) =&gt; width * height,
+        Shape::Circle({radius}) =&gt; PI * radius ** 2,
+    }
+}
+
+fun test() {
+    val rectangle = { width: 5.0, height: 3.0 };
+    val shape = Shape::Rectangle(rectangle);
+    print(area(shape));
+}
+</code></pre>
+<h1><a class="header" href="#nominal-types" id="nominal-types">Nominal types</a></h1>
+<p>A <strong>nominal type</strong> is a type which is unified by-name as opposed to by-structure. Nominals resemble enums with a single anonymous variant.</p>
+<pre><code class="language-text">Item ::=
+  | 'enum' Name '(' Type ')' ';' # Nominal type
+  | ...
+
+Expr ::=
+  | Path '(' Expr ')'            # Nominal construction
+  | ...
+</code></pre>
+<h2><a class="header" href="#example-5" id="example-5">Example</a></h2>
+<p>The following code shows how to create nominal types <code>Human</code> and <code>Alien</code>.</p>
+<pre><code class="language-text">enum Human({age:i32, name:str});
+enum Alien({age:i32, name:str});
+
+fun print(Human(h): Human) {
+    print(h.name)
+}
+
+fun test() {
+    let h = Human({age: 5, name: &quot;bob&quot;});
+    let a = Alien({age: 5, name: &quot;bob&quot;});
+
+    print(h); # OK
+    print(a); # Error: found Alien, expected Human
+}
+</code></pre>
+<h1><a class="header" href="#keywords" id="keywords">Keywords</a></h1>
+<h1><a class="header" href="#dataflow-concepts" id="dataflow-concepts">Dataflow Concepts</a></h1>
+<p>Arc-Script's dataflows are <em>push-based</em>, meaning that data is pushed from sources to sinks, as opposed to pulled to sinks from sources. Dataflow concepts are oriented around <strong>tasks</strong> that react to events produced by <strong>futures</strong> and <strong>streams</strong> of data and produce new events. These concepts are explained in the coming sections.</p>
+<h1><a class="header" href="#asynchronous-values" id="asynchronous-values">Asynchronous Values</a></h1>
+<p>An <strong>asynchronous value</strong> is a value which is computed by an asynchronous function. There are two kinds of asynchronous values: <strong>streams</strong> and <strong>futures</strong>.</p>
+<h1><a class="header" href="#streams" id="streams">Streams</a></h1>
+<p>A <strong>stream</strong> is a potentially infinite sequence of <strong>events</strong>.</p>
+<pre><code>Type ::=
+  | '~' Type  # A stream of events of a specific Type
+</code></pre>
+<h2><a class="header" href="#example-6" id="example-6">Example</a></h2>
+<p>This shows an example of an identity function over streams of integers. Streams are a central concept of Arc-Script programs and are therefore given special syntax in the form of <code>~</code>.</p>
+<pre><code>fun identity(s: ~i32): ~i32 {
+    s
+}
+</code></pre>
+<h1><a class="header" href="#events" id="events">Events</a></h1>
+<p>An <strong>event</strong> is a value at a specific <em>moment in time</em>. The concept of time is transparent in the context of Arc-Script programs. For this reason, events are functionally equivalent to values.</p>
+<h1><a class="header" href="#futures" id="futures">Futures</a></h1>
+<p>A <strong>future</strong> is a single asynchronously computed value. This value is initially unknown and will eventually become known as soon as its computation finishes evaluating. While futures are are created by <strong>tasks</strong> (asynchronous functions), they are indistinguishable from ordinary synchronously-computed values in Arc-Script. The properties of futures are:</p>
+<p>Futures are <em>implicit</em>:</p>
+<ul>
+<li><em>Explicit</em> futures must be explicitly blocked to get their value, e.g., <code>future.get_value()</code>.</li>
+<li><em>Implicit</em> futures are implicitly blocked when their value is needed in an expression.</li>
+</ul>
+<p>Futures are <em>eager</em>:</p>
+<ul>
+<li>Evaluation of <em>eager</em> futures start immediately when they are created.</li>
+<li>Evaluation of <em>lazy</em> futures start only when their value is needed in an expression.</li>
+</ul>
+<h1><a class="header" href="#datetimes" id="datetimes">Datetimes</a></h1>
+<p>A <strong>datetime</strong> (or <strong>time</strong> for short) is a <em>moment in time</em>.</p>
+<pre><code class="language-text">Literal ::=
+  | [0-9]+'-'[0-9]+'-'[0-9]+                                                     # Date
+  | [0-9]+'-'[0-9]+'-'[0-9]+'T'[0-9]+':'[0-9]+':'[0-9]+                          # Date + Time
+  | [0-9]+'-'[0-9]+'-'[0-9]+'T'[0-9]+':'[0-9]+':'[0-9]+('+'|'-')[0-9]+':'[0-9]+  # Date + Time + Zone
+  | ..
+
+Scalar ::=
+  | 'time'
+  | ..
+</code></pre>
+<h2><a class="header" href="#examples-5" id="examples-5">Examples</a></h2>
+<p>Some examples:</p>
+<pre><code class="language-text">2020-04-18
+2020-04-18T18:03:01
+2020-04-18T18:03:01+02
+</code></pre>
+<h1><a class="header" href="#durations" id="durations">Durations</a></h1>
+<p>A <strong>duration</strong> is a <em>length of time</em>.</p>
+<pre><code class="language-text">Literal ::=
+  | [0-9]+'ns'  # Nanosecond
+  | [0-9]+'us'  # Microsecond
+  | [0-9]+'ms'  # Millisecond
+  | [0-9]+'s'   # Second
+  | [0-9]+'m'   # Minute
+  | [0-9]+'h'   # Hour
+  | [0-9]+'d'   # Day
+  | [0-9]+'w'   # Week
+  | ..
+
+Scalar ::=
+  | 'duration'
+  | ..
+</code></pre>
+<h2><a class="header" href="#examples-6" id="examples-6">Examples</a></h2>
+<p>Some examples:</p>
+<pre><code class="language-text">100ns
+100ms
+52w
+100d
+</code></pre>
+<h1><a class="header" href="#tasks" id="tasks">Tasks</a></h1>
+<p>A <strong>task</strong> is an asynchronous first-order function over <em>asynchronous values</em> (i.e., streams or futures). Internally, a task is implemented as an <em>actor</em> which operates incrementally (per-event) over its streams and futures. Each task has an input and output <em>interface</em> of <em>ports</em> which streams can connect to. Tasks <em>receive</em> and <em>process</em> one event from one input port at a time. While processing, the task may <em>emit</em> multiple events at multiple output ports. Additional extensions to tasks are described in following sections.</p>
+<pre><code class="language-text">Item ::=
+  | 'task' Name '(' (Name ':' Type ',')+ ')' ':' Interface '-&gt;' Interface '{' TaskItem* '}'
+  | ..
+
+Interface ::=
+  | Type  # An interface with a single port
+  | ..
+
+TaskItem ::=
+  | 'on' '{' (Pattern ('if' Expr)? '=&gt;' Expr ',')* (Control ',')* '}'  # Event handler
+  | ..
+
+Control ::=
+  | ..  # Handler for special control-events
+
+Expr ::=
+  | 'emit' Expr  # Emit event to output port
+  | ..
+</code></pre>
+<h2><a class="header" href="#example-1" id="example-1">Example 1</a></h2>
+<p>The identity task over streams of integers can be represented and used as follows:</p>
+<pre><code class="language-text">task Identity(): ~i32 -&gt; ~i32 {
+    on event =&gt; emit event
+}
+
+fun test(s: ~i32) -&gt; ~i32 {
+    Identity() (s)
+}
+</code></pre>
+<h2><a class="header" href="#example-2" id="example-2">Example 2</a></h2>
+<p>The map task over streams of integers can be represented and used as follows (generics will eventually be supported):</p>
+<pre><code class="language-text">task Map(f: fun(i32): i32) ~i32 -&gt; ~i32 {
+    on event =&gt; emit f(event)
+}
+
+fun test(s: ~i32) -&gt; ~i32 {
+    Map(fun(x): x + 1) (s)
+}
+</code></pre>
+<h1><a class="header" href="#stateful-tasks" id="stateful-tasks">Stateful tasks</a></h1>
+<p>A <strong>state variable</strong> is a variable which lives in the context of a task. State variables are initialized when creating a task (i.e., when all parameters including streams have been passed to the task).</p>
+<pre><code class="language-text">Item ::=
+  | 'task' Name '(' (Name ':' Type ',')* ')' ':' Interface '-&gt;' Interface '{' TaskItem* '}'
+  | ..
+
+TaskItem ::=
+  | 'var' Name (':' Type)? '=' Expr ';'
+  | 'val' Name (':' Type)? '=' Expr ';'
+  | ..
+</code></pre>
+<h1><a class="header" href="#cells" id="cells">Cells</a></h1>
+<p>A <strong>cell</strong> is an abstract data type which can be used to store a single value.</p>
+<pre><code class="language-text">extern type Cell[T](v: T) {
+    fun set(x: T);
+    fun get(): T;
+}
+</code></pre>
+<p>Cells are useful for representing mutable state inside tasks. For this reason, all mutable variables inside tasks are desugared into cells.</p>
+<h2><a class="header" href="#example-7" id="example-7">Example</a></h2>
+<p><code>Scan</code> is a task which is a combination of <code>Map</code> and <code>Reduce</code>. It maintains an aggregate and outputs it for each aggregated element.</p>
+<pre><code class="language-text">task Scan[A, T](init: A, f: fun(A, T): A): ~T -&gt; ~A {
+    var agg = init;
+    on event =&gt; {
+        agg = f(agg, event);
+        emit agg
+    }
+}
+</code></pre>
+<p>Implicitly, the above desugars to:</p>
+<pre><code class="language-text">task Scan[A, T](init: A, f: fun(A, T): A): ~T -&gt; ~A {
+    val agg = Cell(init);
+    on event =&gt; {
+        agg.set(f(agg.get(), event));
+        emit agg.get()
+    }
+}
+</code></pre>
+<h1><a class="header" href="#sets" id="sets">Sets</a></h1>
+<p>A <strong>set</strong> is an abstract data type which can be used to store collections of unique values.</p>
+<pre><code class="language-text">extern type Set[T]() {
+    fun add(elem: T);
+    fun delete(elem: T);
+    fun contains(elem: T): bool;
+}
+</code></pre>
+<p>Sets have the following syntactic sugar:</p>
+<pre><code class="language-text">Expr ::=
+  | Expr 'in' Expr        # Check if set contains element
+  | Expr 'not' 'in' Expr  # Check if does not contain element
+  | ..
+</code></pre>
+<h2><a class="header" href="#example-8" id="example-8">Example</a></h2>
+<p><code>Deduplicate</code> is a task which filters out unique numbers from a stream of integers.</p>
+<pre><code class="language-text">task Deduplicate(): ~i32 -&gt; ~i32 {
+    val unique: Set[i32] = Set();
+    on event =&gt; if event not in unique {
+        unique.add(event);
+        emit event
+    }
+}
+</code></pre>
+<h1><a class="header" href="#dictionaries" id="dictionaries">Dictionaries</a></h1>
+<p>A <em>dictionary</em> is an abstract data type for storing key-value pairs.</p>
+<pre><code class="language-text">extern type Dict[K,V]() {
+    fun insert(key: K, val: V);
+    fun get(key: K, default: V): V;
+    fun contains(key: K): bool;
+}
+</code></pre>
+<p>Dictionaries have the following syntactic sugar:</p>
+<pre><code class="language-text">Expr ::=
+  | Expr 'in' Expr        # Check if dict contains key
+  | Expr 'not' 'in' Expr  # Check if dict does not contain key
+  | Expr '[' Expr ']'     # Get element
+</code></pre>
+<h2><a class="header" href="#example-9" id="example-9">Example</a></h2>
+<p><code>WordCount</code> is a task which counts the occurrences of words in a stream of words:</p>
+<pre><code class="language-text">task WordCount(): ~str -&gt; ~i32 {
+    val count: Dict[str,i32] = Dict();
+    on word =&gt; {
+        count[word] = count.get(word, 0) + 1;
+        emit count[word]
+    }
+}
+</code></pre>
+<h1><a class="header" href="#appenders" id="appenders">Appenders</a></h1>
+<p>An <em>appender</em> is an append-only vector which can be folded. By folding, the appender's elements are consumed, and the appender is cleared.</p>
+<pre><code class="language-text">extern type Appender[T]() {
+    fun push(key: T);
+    fun fold[A](init: A, fun(A, T): A): A;
+    fun clear();
+}
+</code></pre>
+<h2><a class="header" href="#example-10" id="example-10">Example</a></h2>
+<p><code>LazyFold</code> is a task which starts folding as soon as a predicate is satisfied:</p>
+<pre><code class="language-text">task LazyFold[A,T](pred: fun(T) -&gt; bool, init: A, binop: fun(A, T): A): ~T -&gt; ~A {
+    val app: Appender[T] = Appender();
+    on event =&gt; {
+        app.push(event);
+        if pred(event) {
+            emit app.fold(init, binop)
+        }
+    }
+}
+</code></pre>
+<h1><a class="header" href="#ports" id="ports">Ports</a></h1>
+<p>To allow the implementation of more advanced operators that for example <em>merge</em> and <em>split</em> several streams, interfaces of tasks can be provided with additional <strong>ports</strong>. Inside the task, input and output ports are discriminated by-name to know where events come and go. The order in which ports are declared in the interface directly corresponds to the order in which streams connect to the interface.</p>
+<pre><code class="language-text">Item ::=
+  | 'task' Name '(' (Name ':' Type ',')* ')' ':' Interface '-&gt;' Interface '{' TaskItem* '}'
+  | ..
+
+Interface ::=
+  | Type                             # An interface with a single port
+  | '(' (Name '(' Type ')' ',')+ ')' # An interface with discriminated ports
+</code></pre>
+<h2><a class="header" href="#examples-7" id="examples-7">Examples</a></h2>
+<p><code>Clone</code> is a task which clones a stream into two.</p>
+<pre><code class="language-text">task Clone(): ~i32 -&gt; (A(~i32), B(~i32)) {
+    on event =&gt; {
+        emit A(event);
+        emit B(event)
+    }
+}
+</code></pre>
+<p><code>Merge</code> is a task which merges two streams into one.</p>
+<pre><code class="language-text">task Merge(): (A(~i32), B(~i32)) -&gt; ~i32 {
+    on {
+        A(event) =&gt; emit event,
+        B(event) =&gt; emit event,
+    }
+}
+</code></pre>
+<p>Following is an example of how to use <code>Clone</code> and <code>Merge</code>. The example clones a stream into two streams, maps those streams to get their odd and even numbers, and then merges the resulting streams into one.</p>
+<pre><code class="language-text">fun test(s0: ~i32): ~i32 {
+    val (s1, s2) = Clone() (s0);
+    val s3 = Map(fun(x): x % 2 == 0) (s1);
+    val s4 = Map(fun(x): x % 2 == 1) (s2);
+    val s5 = Merge() (s3, s4);
+    s5
+}
+</code></pre>
+<p>Visually the pipeline looks something like this:</p>
+<pre><code class="language-text">         +-&gt; Map(fun(x): x % 2 == 0) -+
+         |                            |
+         |                            v
+-&gt; Clone()                            Merge() -&gt;
+         |                            ^
+         |                            |
+         +-&gt; Map(fun(x): x % 2 == 1) -+
+</code></pre>
+<h1><a class="header" href="#timers" id="timers">Timers</a></h1>
+<p>A <strong>timer</strong> is an internal port which can be <em>scheduled</em> to receive an event <em>after</em> a specified duration.</p>
+<pre><code class="language-text">Value ::=
+  | Value 'after' Value
+  | ..
+
+Type ::=
+  | Type 'after' Type
+  | ..
+
+Pattern ::=
+  | Pattern 'after' Pattern
+  | ..
+
+Expr ::=
+  | Expr 'after' Expr  # Associate an expression with a duration
+  | 'trigger' Expr     # Schedule timer
+  | ..
+
+TaskItem ::=
+  | 'port' Name ( '(' Type ')' )? ';'  # Internal port
+</code></pre>
+<h2><a class="header" href="#semantics" id="semantics">Semantics</a></h2>
+<p>Timed values, types, patterns, and expressions, are all desugared as follows:</p>
+<pre><code class="language-text">------------------------------------(DesugarAfter)
+Γ ⊢ t0 after t1  =  {val:t0, dur:t1}
+</code></pre>
+<h2><a class="header" href="#example-11" id="example-11">Example</a></h2>
+<p><code>TummblingWindow</code> is a task which emits an aggregate over a stream every <code>dur</code> for the last <code>dur</code>.</p>
+<pre><code class="language-text">task TumblingWindow[A, T](init: A, dur: duration, f: fun(A, T): A): (In(~T)) -&gt; (Out(~A)) {
+    var agg = init;
+    port Tumble;  # A port for triggering window-aggregation results
+    trigger Tumble after dur;
+    on {
+        In(event) =&gt; agg = f(agg, event),
+        Tumble =&gt; {
+            emit Out(agg);
+            agg = init;
+            trigger Tumble after dur
+        }
+    }
+}
+</code></pre>
+<h1><a class="header" href="#timeouts" id="timeouts">Timeouts</a></h1>
+<p>A <strong>timeout</strong> is a control-event which is triggered after no stream-event is received within a specified duration. Internally, a counter within the task is ticking down. When it reaches zero, the <code>after</code> (timeout) clause is fired. The counter is set to the specified duration whenever an event is received. The counter starts ticking as soon as it receives its first event.</p>
+<pre><code class="language-text">TaskItem ::=
+  | 'on' '{' (Pattern ('if' Expr)? '=&gt;' Expr ',')+ (Control ',')* '}'  # Event handler
+  | ..
+
+Control ::=
+  | 'after' Expr '=&gt;' Expr  # Timeout
+  | ..
+</code></pre>
+<h2><a class="header" href="#examples-8" id="examples-8">Examples</a></h2>
+<p>Timeouts allow the definition of <em>session windows</em>. For example:</p>
+<pre><code class="language-text"># A window which outputs an aggregate (and resets) after a timeout of not receiving events.
+task SessionWindow[A,T](init: A, dur: duration, binop: fun(A, T): A) ~T -&gt; ~A {
+    var agg = init;
+    on {
+        event =&gt; agg = binop(agg, event),
+        after dur =&gt; {
+            emit agg;
+            agg = init
+        }
+    }
+}
+</code></pre>
+<h1><a class="header" href="#termination" id="termination">Termination</a></h1>
+<p>Tasks are by default <em>long-running</em>, meaning that they will continue processing as long as there is input. Tasks can in addition be <em>short-running</em>, meaning that they might eventually <strong>terminate</strong> and potentially produce an output value. The output value is a <em>future</em> that completes when the task terminates. By terminating, the task also emits an <strong>end-of-stream marker</strong> on all its output channels, indicating that it will produce no more output, and is turned into a <strong>sink</strong>.</p>
+<pre><code class="language-text">Expr ::=
+  | 'exit' Expr?  # Terminates the task with an optional return value
+
+Control ::=
+  | 'done' '=&gt;' Expr  # Fires when end-of-stream markers are received on all inputs
+</code></pre>
+<h2><a class="header" href="#example-1-1" id="example-1-1">Example 1</a></h2>
+<p><code>TakeUntil</code> is a task which forwards events of a stream until a predicate is satisfied.</p>
+<pre><code class="language-text">task TakeUntil[T](p: fun(T): bool): ~T -&gt; ~T {
+    on event =&gt; if p(event) {
+        exit
+    } else {
+        emit event
+    }
+}
+
+# Take until a number above 100 is encountered
+fun test(s: ~i32): ~i32 {
+    TakeUntil(fun(x): x &gt; 100) (s)
+}
+</code></pre>
+<h2><a class="header" href="#example-2-1" id="example-2-1">Example 2</a></h2>
+<p><code>Fold</code> is a task which aggregates a stream into a single value.</p>
+<pre><code class="language-text">task Fold[A,T](init: A, f: fun(A, T): A): ~T -&gt; A {
+    var agg: A = init;
+    on {
+        event =&gt; agg = f(agg, event),
+        done =&gt; exit agg
+    }
+}
+
+# Calculate the average of a stream
+fun avg(s: ~i32): i32 {
+    val sum   = Fold(0, fun(a,x): a + x) (s);
+    val count = Fold(0, fun(a,_): a + 1) (s);
+    sum / count
+}
+</code></pre>
+<h2><a class="header" href="#example-3" id="example-3">Example 3</a></h2>
+<p><code>MergeFold</code> is a task which aggregates two streams into a single value.</p>
+<pre><code class="language-text">task MergeFold[A,T](init: A, f: fun(A, T): A): (A(~T), B(~T)) -&gt; A {
+    var agg: A = init;
+    on {
+        A(event) or B(event) =&gt; agg = f(agg, event),
+        done =&gt; exit agg
+    }
+}
+</code></pre>
+<h1><a class="header" href="#keys" id="keys">Keys</a></h1>
+<p>Events in streams are always partitioned by <strong>key</strong>. By default the <strong>key</strong> is implicit, but can be made explicit by annotating a function or task as <code>shuffle</code>. A task or function marked as <code>shuffle</code> is able to update its streams' keys.</p>
+<pre><code class="language-text">Expr ::=
+  | Expr 'by' Expr
+  | ..
+
+Type ::=
+  | Type 'by' Type
+  | ..
+
+Item ::=
+  | 'shuffle' 'fun' Name '(' (Name ':' Type ',')+ ')' ':' Type '{' TaskItem* '}'
+  | 'shuffle' 'task' Name '(' (Name ':' Type ',')+ ')' ':' Interface '-&gt;' Interface '{' TaskItem* '}'
+  | ..
+</code></pre>
+<h2><a class="header" href="#semantics-1" id="semantics-1">Semantics</a></h2>
+<p>Keyed values, types, patterns, and expressions, are all desugared as follows:</p>
+<pre><code class="language-text">------------------------------------(DesugarBy)
+Γ ⊢ t0 by t1  =  {val:t0, key:t1}
+</code></pre>
+<h2><a class="header" href="#example-1-2" id="example-1-2">Example 1</a></h2>
+<p><code>KeyBy</code> changes the key of a stream from <code>K0</code> to <code>K1</code> through function <code>f</code>.</p>
+<pre><code class="language-text">shuffle task KeyBy[V, K0, K1](f: fun(V): K1) ~V by K0 -&gt; ~V by K1 {
+    on event by old_key =&gt; emit event by f(event)
+}
+</code></pre>
+<p>An example of how to use <code>KeyBy</code>:</p>
+<pre><code class="language-text">shuffle fun test(s: ~i32 by i32): ~i32 by i32 {
+    s |&gt; KeyBy(fun(x): x % 50) # Re-shuffle into 50 key groups
+      |&gt; KeyBy(fun(x): x % 10) # Re-shuffle into 10 key groups
+}
+</code></pre>
+<h2><a class="header" href="#example-2-2" id="example-2-2">Example 2</a></h2>
+<p><code>Map</code> changes the value of a stream from <code>V0</code> to <code>V1</code> through function <code>f</code>, while leaving the key untouched.</p>
+<pre><code class="language-text">task Map[V0, V1](f: fun(V0): V1) ~V0 -&gt; ~V1 {
+    on event =&gt; emit f(event)
+}
+</code></pre>
+<p>An example of how to use <code>KeyBy</code>:</p>
+<pre><code class="language-text">fun test(s: ~i32): ~i32 {
+  s |&gt; Map(fun(x): x + 1)
+    |&gt; Map(fun(x): x - 1)
+}
+</code></pre>
+<p>Implicitly, the above will desugar into a generic keyed function:</p>
+<pre><code class="language-text">shuffle fun test[K](s: ~i32 by K): ~i32 by K {
+    s |&gt; Map(fun(x): x + 1)
+      |&gt; Map(fun(x): x - 1)
+}
+</code></pre>
+<h1><a class="header" href="#pipelines" id="pipelines">Pipelines</a></h1>
+<p>If a <strong>task</strong> is a <em>first-order</em> function over streams, then a <strong>pipeline</strong> is a <em>higher-order</em> function over streams. Pipelines are in reality just ordinary functions that take streams or pipelines as input and return streams or pipelines as output.</p>
+<h2><a class="header" href="#example-12" id="example-12">Example</a></h2>
+<p>The following code represents a pipeline of three map tasks:</p>
+<pre><code class="language-text">fun my_pipeline(stream0: ~i32): ~i32 {
+    val stream1 = Map(fun(x): x-1) (stream0);
+    val stream2 = Map(fun(x): x+2) (stream1);
+    val stream3 = Map(fun(x): x*2) (stream2);
+    stream3
+}
+</code></pre>
+<p>Visually the pipeline looks like this:</p>
+<pre><code class="language-text">    -&gt; Map(fun(x): x-1) -&gt; Map(fun(x): x+2) -&gt; Map(fun(x): x*2) -&gt;
+</code></pre>
+<h1><a class="header" href="#piping-operator" id="piping-operator">Piping Operator</a></h1>
+<p>The <strong>piping operator</strong> can be used to compose dataflow programs without creating intermediate variables.</p>
+<pre><code class="language-text">Expr ::=
+  | Expr '|&gt;' Expr
+  | ..
+</code></pre>
+<h2><a class="header" href="#semantics-2" id="semantics-2">Semantics</a></h2>
+<p>The semantics of the piping operator is based on function application:</p>
+<pre><code class="language-text"> Γ ⊢ t0: A
+ Γ ⊢ t1: A -&gt; B
+------------------------(Pipe)
+ Γ ⊢ t0 |&gt; t1  =  t1(t0)
+</code></pre>
+<h2><a class="header" href="#examples-9" id="examples-9">Examples</a></h2>
+<p>The following pipeline:</p>
+<pre><code class="language-text">fun pipeline(s0: ~i32): ~i32 {
+    val s1 = Identity() (s0);
+    val s2 = Identity() (s1);
+    val s3 = Identity() (s2);
+    s3
+}
+</code></pre>
+<p>Could be rewritten as follows using the piping operator:</p>
+<pre><code class="language-text">fun pipeline(s0: ~i32): ~i32 {
+    s0 |&gt; Identity()
+       |&gt; Identity()
+       |&gt; Identity()
+}
+</code></pre>
+<h1><a class="header" href="#collection-concepts" id="collection-concepts">Collection Concepts</a></h1>
+<h1><a class="header" href="#collectable-sinks" id="collectable-sinks">Collectable Sinks</a></h1>
+<h1><a class="header" href="#collectable-sinks-1" id="collectable-sinks-1">Collectable Sinks</a></h1>
+<h1><a class="header" href="#discussion" id="discussion">Discussion</a></h1>
+<p>This section contains some extra discussion behind the problem and motivation of Arc-Script.</p>
+<h2><a class="header" href="#why-arc-script" id="why-arc-script">Why Arc-Script?</a></h2>
+<p>Arc-Script is a high-level language for data analytics which under-the-hood translates into <a href="https://github.com/cda-group/arcon">Arcon</a>. Arcon is a distributed system for stream processing and data warehousing which is implemented in Rust. Similar to other streaming systems (e.g., <a href="https://flink.apache.org/">Flink</a> and <a href="https://github.com/TimelyDataflow/timely-dataflow">Timely</a>) Arcon provides a <em>framework</em> in Rust - a general purpose programming language. Since anything which is a value in Rust can be hidden behind a function abstraction, a valid argument against Arc-Script is <em>&quot;Why not just use Arcon and Rust&quot;</em>?. Rust particularly has the following benefits:</p>
+<ul>
+<li>Rust is <em>flexible</em> by being able to express general computations.</li>
+<li>Rust is <em>fast</em> by compiling into efficient machine code.</li>
+<li>Rust is <em>safe</em> by preventing memory-management errors.</li>
+</ul>
+<h2><a class="header" href="#core-problems" id="core-problems">Core Problems</a></h2>
+<p>A core problem is that Rust was not designed for the specific problem of data analytics. Rust exposes constructs which a language for data analytics does not benefit from and should ideally not have. Notably, Rust has references, lifetimes, affine types, and low-level memory management. While these features give programmers control over <em>how</em> to solve problems (which may lead to more efficient solutions), they have less impact on <em>what</em> problems can be solved. Data analysts may therefore get stuck on trying to optimise solutions instead of solving problems. Optimisation should ideally be the job of a compiler and not a human. Since these features are at the core of Rust, any abstractions built on top of them within Rust are inevitably going to be leaking their complexity as well. In other words, Rust cannot hide the fact that it has references, affine types, and other details. This phenomena is by-design since Rust programs should be efficient even at high levels of abstraction.</p>
+<p>The second problem is that Arcon is a framework written and exposed in Rust and cannot therefore solve the previous problem. The only solution to completely decouple program specification from execution is to develop a language which compiles into Rust. Note that these problems are not just exclusive to Arcon, but apply more generally to all DSLs which are exposed as frameworks. The reason why frameworks such as Flink have been successful is that they are embedded in languages whose features more closely resemble what is expected of a language for data analytics. Notably, Scala has briefer syntax and by-value semantics. Furthermore, embedding DSLs as frameworks only makes sense if the framework is written in the same language as the system's runtime. It is for example difficult to expose the entirety of Arcon's framework in Python in a natural way since many of its components (e.g., operator implementations) cannot simply be passed around as values in Rust. Arcon can however be exposed as a library in Python at the cost of flexibility by exposing hard-coded versions of Arcon operators (e.g., map, filter). Moreover, exposing Rust in languages with virtual-machines such as Scala would not work since Scala UDFs cannot execute in Rust. Python UDFs are more feasible as they do not need to execute in a new process.</p>
+<p>Arc-Script's goal is to be high-level, but not too high-level. Very high-level languages such as SQL come at a loss of generality by heavily constraining what problems can be solved. Instead, Arc-Script aims to be relatively high-level and offer support for abstraction. Unlike Rust, these abstractions should not leak complexity, but may come at the cost of performance. Performance is an issue addressed by Arc-Script's MLIR middle-end optimiser and not the developer.</p>
+<h2><a class="header" href="#problems" id="problems">Problems</a></h2>
+<p>This section pinpoints additional problems and their consequences.</p>
+<ul>
+<li><strong>P1</strong>:
+<ul>
+<li><strong>Problem</strong>: Arcon does not have data analytics-specific <em>formalism</em>.</li>
+<li><strong>Consequence</strong>: Hard to define what an Arcon program exactly is.</li>
+</ul>
+</li>
+<li><strong>P2</strong>:
+<ul>
+<li><strong>Problem</strong>: Arcon does not have data analytics-specific <em>syntax</em>.</li>
+<li><strong>Consequence</strong>: Programs are more difficult to express than they should be (boilerplate code, unfamiliarity).</li>
+</ul>
+</li>
+<li><strong>P3</strong>:
+<ul>
+<li><strong>Problem</strong>: Arcon executes programs exactly as they are written without high-level optimisations.</li>
+<li><strong>Consequence</strong>: Programmers need to think about how they write their programs to achieve good performance.</li>
+</ul>
+</li>
+<li><strong>P4</strong>:
+<ul>
+<li><strong>Problem</strong>: Arcon has no information about the code which it is executing</li>
+<li><strong>Consequence</strong>: Cannot support runtime optimisation like operator fusion</li>
+</ul>
+</li>
+<li><strong>P5</strong>:
+<ul>
+<li><strong>Problem</strong>: Arcon does not support a type system at the data analytics level</li>
+<li><strong>Consequence</strong>: Hard to statically verify certain properties while providing helpful error messages</li>
+</ul>
+</li>
+<li><strong>P6</strong>:
+<ul>
+<li><strong>Problem</strong>: Rust's type system is restrictive.</li>
+<li><strong>Consequence</strong>: Arcon has no option but to not support generalisations that would be helpful at the data analytics-level (e.g., operator arity).</li>
+</ul>
+</li>
+<li><strong>P7</strong>:
+<ul>
+<li><strong>Problem</strong>: Arcon combines driver- and worker-code, and compiles code eagerly and only once, for all machines at startup.</li>
+<li><strong>Consequences</strong>: Driver and workers must have homogeneous hardware </li>
+</ul>
+</li>
+<li><strong>P7</strong>:
+<ul>
+<li><strong>Problem</strong>: Arcon's Rust-based framework is tightly coupled with its runtime</li>
+<li><strong>Consequence</strong>: Programs written in Arcon cannot run on other runtimes (e.g., Timely, Flink) </li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#outline" id="outline">Outline</a></h2>
+<p>In response to the previously mentioned problems, the question is, can we get <em>&quot;the best of both worlds?&quot;</em> of Rust's and Arc-Script's benefits. In other words, can we achieve both efficiency and simplicity? The coming sections will go through base language concepts of Arc-Script. Then, we will delve deeper into dataflows and collections.</p>
+<p><sup class="footnote-reference"><a href="#1">1</a></sup> In contrast to libraries, frameworks rely on the concept of <a href="https://en.wikipedia.org/wiki/Inversion_of_control"><em>inversion of control</em></a> which in basic terms mean that users can extend the framework with custom code (e.g., UDFs and operators), but is not in charge of how that code will be executed.</p>
+<h1><a class="header" href="#arc-mlir---language-reference" id="arc-mlir---language-reference">Arc-MLIR - Language Reference</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
