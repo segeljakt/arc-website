@@ -3,11 +3,12 @@
 A **use**-item imports a name into the current namespace and optionally aliases it.
 
 
-```text
-Item ::=
-  | 'use' Path ('as' Name)?;  # Import (and optionally alias)
+<pre>
+<code>Item ::=
+  | <'use'> Path (<'as'> Name)?;  # Import (and optionally alias)
   | ...
-```
+</code>
+</pre>
 
 ## Examples
 

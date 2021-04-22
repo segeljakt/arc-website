@@ -2,10 +2,12 @@
 
 A **stream** is a potentially infinite sequence of **events**.
 
-```
+<pre>
+<code>
 Type ::=
-  | '~' Type  # A stream of events of a specific Type
-```
+  | <'~'> Type  # A stream of events of a specific Type
+</code>
+</pre>
 
 ## Example
 

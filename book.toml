@@ -9,6 +9,10 @@ title = "Arc"
 build-dir = "book"
 create-missing = true
 
+[preprocessor.mdcolor]
+command = "./mdcolor/target/debug/mdcolor"
+renderer = ["html"]
+
 [preprocess.index]
 
 [preprocess.links]
@@ -18,6 +22,8 @@ default-theme = "rust"
 no-section-label = true
 git_repository_url = "www.github.com/cda-group/arc"
 git_repository_icon = "fa-github"
+mathjax-support = true
+additional-css = ["style.css"]
 
 [output.html.playpen]
 editable = false

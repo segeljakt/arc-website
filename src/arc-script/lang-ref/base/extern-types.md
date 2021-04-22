@@ -2,13 +2,14 @@
 
 An **extern type** is an abstract data type with methods whose implementations are defined in Rust.
 
-```text
-Item ::=
-  | 'extern' 'type' Name '(' (Name ':' Type ',')* ')' '{' # Abstract Data Type (ADT)
-      ('fun' Name '(' (Type ',')* ')' ':' Type ';')*      # Externally implemented method
-    } 
+<pre>
+<code>Item ::=
+  | <'extern'> <'type'> Name <'('> (Name <':'> Type <','>)* <')'> <'{'> # Abstract Data Type (ADT)
+      (<'fun'> Name <'('> (Type <','>)* <')'> <':'> Type <';'>)*    # Externally implemented method
+    <'}'>
   | ...
-```
+</code>
+</pre>
 
 ## Example
 

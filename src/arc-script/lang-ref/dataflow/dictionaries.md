@@ -12,12 +12,13 @@ extern type Dict[K,V]() {
 
 Dictionaries have the following syntactic sugar:
 
-```text
-Expr ::=
-  | Expr 'in' Expr        # Check if dict contains key
-  | Expr 'not' 'in' Expr  # Check if dict does not contain key
-  | Expr '[' Expr ']'     # Get element
-```
+<pre>
+<code>Expr ::=
+  | Expr <'in'> Expr      # Check if dict contains key
+  | Expr <'not'> <'in'> Expr  # Check if dict does not contain key
+  | Expr <'['> Expr <']'>     # Get element
+</code>
+</pre>
 
 ## Example
 

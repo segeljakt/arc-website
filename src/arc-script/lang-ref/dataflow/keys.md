@@ -2,20 +2,21 @@
 
 Events in streams are always partitioned by **key**. By default the **key** is implicit, but can be made explicit by annotating a function or task as `shuffle`. A task or function marked as `shuffle` is able to update its streams' keys.
 
-```text
-Expr ::=
-  | Expr 'by' Expr
+<pre>
+<code>Expr ::=
+  | Expr <'by'> Expr
   | ..
 
 Type ::=
-  | Type 'by' Type
+  | Type <'by'> Type
   | ..
 
 Item ::=
-  | 'shuffle' 'fun' Name '(' (Name ':' Type ',')+ ')' ':' Type '{' TaskItem* '}'
-  | 'shuffle' 'task' Name '(' (Name ':' Type ',')+ ')' ':' Interface '->' Interface '{' TaskItem* '}'
+  | <'shuffle'> <'fun'> Name <'('> (Name <':'> Type <','>)+ <')'> <':'> Type <'{'> TaskItem* <'}'>
+  | <'shuffle'> <'task'> Name <'('> (Name <':'> Type <','>)+ <')'> <':'> Interface <'->'> Interface <'{'> TaskItem* <'}'>
   | ..
-```
+</code>
+</pre>
 
 ## Semantics
 

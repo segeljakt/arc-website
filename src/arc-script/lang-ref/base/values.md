@@ -2,16 +2,17 @@
 
 A **value** is the result of evaluating an **expression**.
 
-```text
-Value ::=
-  | Literal                                         # Literal-value
-  | '{' (Name ':' Value ',')+ '}'                   # Record-value
-  | '(' (Value ',')+ ')'                            # Tuple-value
-  | 'fun' '(' (Pattern ':' Type ',')+ ')' ':' Expr  # Lambda-value
-  | Value? '..' ('='? Value)?                       # Range-value
-  | Path                                            # Item-value
-  | Path '(' Value ')'                              # Enum-value
-```
+<pre>
+<code>Value ::=
+  | Literal                             # Literal-value
+  | <'{'> (Name <':'> Value <','>)+ <'}'>               # Record-value
+  | <'('> (Value <','>)+ <')'>                      # Tuple-value
+  | <'fun'> <'('> (Pattern <':'> Type <','>)+ <')'> <':'> Expr  # Lambda-value
+  | Value? <'..'> (<'='>? Value)?               # Range-value
+  | Path                                # Item-value
+  | Path <'('> Value <')'>                      # Enum-value
+</code>
+</pre>
 
 ## Examples
 

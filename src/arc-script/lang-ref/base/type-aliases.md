@@ -2,11 +2,12 @@
 
 A **type alias** is a purely cosmetic alias of a type.
 
-```text
-Item ::=
-  | 'type' Name '=' Type ';'  # Type alias
+<pre>
+<code>Item ::=
+  | <'type'> Name <'='> Type <';'>  # Type alias
   | ...
-```
+</code>
+</pre>
 
 ## Example
 

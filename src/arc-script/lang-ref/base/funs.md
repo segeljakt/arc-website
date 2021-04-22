@@ -2,15 +2,16 @@
 
 A **function** is your ordinary function. It takes some parameters and evaluates its body into a value.
 
-```text
-Item ::=
-  | 'fun' Name '(' (Name ':' Type ',')* ')' ':' Type '{' Expr '}'  # Function definition
+<pre>
+<code>Item ::=
+  | <'fun'> Name <'('> (Name <':'> Type <','>)* <')'> <':'> Type <'{'> Expr <'}'>  # Function definition
   | ...
 
 Expr ::=
-  | Expr '(' (Expr ',')* ')'                                       # Function call syntax
+  | Expr <'('> (Expr <','>)* <')'>  # Function call syntax
   | ...
-```
+</code>
+</pre>
 
 ## Examples
 

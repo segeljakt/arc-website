@@ -47,8 +47,12 @@ This section pinpoints additional problems and their consequences.
   * **Problem**: Arcon's Rust-based framework is tightly coupled with its runtime
   * **Consequence**: Programs written in Arcon cannot run on other runtimes (e.g., Timely, Flink) 
 
+# Aim
+
+Arc-Script's level of abstraction is lower than query-languages but higher than systems languages. Programs contain sequential (non-declarative) code, have pass-by-value semantics, and compile into and intermix with systems languages and streaming runtimes. Arc-Script's generality level is broader than query-languages but narrower than general-purpose languages. Like query-languages, Arc-Script programs are about programming with high-level operators and collections, but unlike query-languages, these concepts can also be naturally expressed inside Arc-Script programs. The idea is to give more flexibility and allow programs to be optimised at a finer level of granularity, while removing potential complexity introduced by systems languages. Since there are benefits to lifting the level of abstraction even further, the goal is also to build a higher level language which compiles into Arc-Script.
+
 ## Outline
 
-In response to the previously mentioned problems, the question is, can we get *"the best of both worlds?"* of Rust's and Arc-Script's benefits. In other words, can we achieve both efficiency and simplicity? The coming sections will go through base language concepts of Arc-Script. Then, we will delve deeper into dataflows and collections.
+In response to the previously mentioned problems, the question is, can we get *"the best of both worlds?"* of Rust's and Arc-Script's benefits. In other words, can we achieve both efficiency and simplicity?
 
 [^1] In contrast to libraries, frameworks rely on the concept of [*inversion of control*](https://en.wikipedia.org/wiki/Inversion_of_control) which in basic terms mean that users can extend the framework with custom code (e.g., UDFs and operators), but is not in charge of how that code will be executed.

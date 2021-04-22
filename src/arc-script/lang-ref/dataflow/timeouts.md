@@ -2,15 +2,17 @@
 
 A **timeout** is a control-event which is triggered after no stream-event is received within a specified duration. Internally, a counter within the task is ticking down. When it reaches zero, the `after` (timeout) clause is fired. The counter is set to the specified duration whenever an event is received. The counter starts ticking as soon as it receives its first event.
 
-```text
+<pre>
+<code>
 TaskItem ::=
-  | 'on' '{' (Pattern ('if' Expr)? '=>' Expr ',')+ (Control ',')* '}'  # Event handler
+  | <'on'> <'{'> (Pattern (<'if'> Expr)? <'=>'> Expr <','>)+ (Control <','>)* <'}'>  # Event handler
   | ..
 
 Control ::=
-  | 'after' Expr '=>' Expr  # Timeout
+  | <'after'> Expr <'=>'> Expr  # Timeout
   | ..
-```
+</code>
+</pre>
 
 ## Examples
 

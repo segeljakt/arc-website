@@ -8,5 +8,5 @@ In the following sections, we will explain each concept by formally defining its
 * `-` is for ranges (e.g., `a-zA-Z`).
 * `.` is for matching any character.
 * `\` is for escaping characters.
-* Rules are written as uppercase (e.g., `Rule`).
-* Symbols are enclosed with single-quotes (e.g., `'symbol'`).
+* Non-terminals are written as uppercase (e.g., `Expr`).
+* Terminals are written in blue text (e.g., <code><'for'></code>)

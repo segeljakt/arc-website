@@ -2,11 +2,12 @@
 
 An **extern function** is a function-declaration whose implementation is defined externally, outside of Arc-Script, inside Rust.
 
-```text
-Item ::=
-  | 'extern' 'fun' Name '(' (Name ':' Type ',')* ')' ':' Type ';'  # Extern function declaration
+<pre>
+<code>Item ::=
+  | <'extern'> <'fun'> Name <'('> (Name <':'> Type <','>)* <')'> <':'> Type <';'>  # Extern function declaration
   | ...
-```
+</code>
+</pre>
 
 ## Example
 

@@ -2,11 +2,12 @@
 
 A **global** is an *immutable* variable which can be referenced by-path.
 
-```text
-Item ::=
-  | 'val' Name '=' Value ';'  # Global
+<pre>
+<code>Item ::=
+  | <'val'> Name <'='> Value <';'>  # Global
   | ...
-```
+</code>
+</pre>
 
 ## Example
 

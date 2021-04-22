@@ -2,11 +2,13 @@
 
 The **piping operator** can be used to compose dataflow programs without creating intermediate variables.
 
-```text
+<pre>
+<code>
 Expr ::=
-  | Expr '|>' Expr
+  | Expr <'|>'> Expr
   | ..
-```
+</code>
+</pre>
 
 ## Semantics
 

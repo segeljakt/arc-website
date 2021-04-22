@@ -1,5 +1,9 @@
 # Summary
 
+- [Algorithms](algorithms/algorithms.md)
+  - [Signal Smoothing](algorithms/signal-smoothing.md)
+  - [Peak Detection](algorithms/peak-detection.md)
+  - [Reservoir Sampling](algorithms/reservoir-sampling.md)
 - [Arc-Script - Version 0.0.1](arc-script/doc.md)
   - [Problem and Motivation](arc-script/problem-motivation.md)
   - [Getting Started](arc-script/getting-started.md)

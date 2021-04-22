@@ -2,15 +2,17 @@
 
 To allow the implementation of more advanced operators that for example *merge* and *split* several streams, interfaces of tasks can be provided with additional **ports**. Inside the task, input and output ports are discriminated by-name to know where events come and go. The order in which ports are declared in the interface directly corresponds to the order in which streams connect to the interface.
 
-```text
+<pre>
+<code>
 Item ::=
-  | 'task' Name '(' (Name ':' Type ',')* ')' ':' Interface '->' Interface '{' TaskItem* '}'
+  | <'task'> Name <'('> (Name <':'> Type <','>)* <')'> <':'> Interface <'->'> Interface <'{'> TaskItem* <'}'>
   | ..
 
 Interface ::=
-  | Type                             # An interface with a single port
-  | '(' (Name '(' Type ')' ',')+ ')' # An interface with discriminated ports
-```
+  | Type                   # An interface with a single port
+  | <'('> (Name <'('> Type <')'> <','>)+ <')'> # An interface with discriminated ports
+</code>
+</pre>
 
 ## Examples
 

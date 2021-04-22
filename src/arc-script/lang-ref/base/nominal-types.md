@@ -2,15 +2,16 @@
 
 A **nominal type** is a type which is unified by-name as opposed to by-structure. Nominals resemble enums with a single anonymous variant.
 
-```text
-Item ::=
-  | 'enum' Name '(' Type ')' ';' # Nominal type
+<pre>
+<code>Item ::=
+  | <'enum'> Name <'('> Type <')'> <';'> # Nominal type
   | ...
 
 Expr ::=
-  | Path '(' Expr ')'            # Nominal construction
+  | Path <'('> Expr <')'>  # Nominal construction
   | ...
-```
+</code>
+</pre>
 
 ## Example
 

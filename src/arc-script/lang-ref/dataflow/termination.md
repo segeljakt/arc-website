@@ -2,13 +2,15 @@
 
 Tasks are by default *long-running*, meaning that they will continue processing as long as there is input. Tasks can in addition be *short-running*, meaning that they might eventually **terminate** and potentially produce an output value. The output value is a *future* that completes when the task terminates. By terminating, the task also emits an **end-of-stream marker** on all its output channels, indicating that it will produce no more output, and is turned into a **sink**.
 
-```text
+<pre>
+<code>
 Expr ::=
-  | 'exit' Expr?  # Terminates the task with an optional return value
+  | <'exit'> Expr?  # Terminates the task with an optional return value
 
 Control ::=
-  | 'done' '=>' Expr  # Fires when end-of-stream markers are received on all inputs
-```
+  | <'done'> <'=>'> Expr  # Fires when end-of-stream markers are received on all inputs
+</code>
+</pre>
 
 ## Example 1
 

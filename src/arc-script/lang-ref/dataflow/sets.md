@@ -12,19 +12,21 @@ extern type Set[T]() {
 
 Sets have the following syntactic sugar:
 
-```text
+<pre>
+<code>
 Expr ::=
-  | Expr 'in' Expr        # Check if set contains element
-  | Expr 'not' 'in' Expr  # Check if does not contain element
+  | Expr <'in'> Expr      # Check if set contains element
+  | Expr <'not'> <'in'> Expr  # Check if does not contain element
   | ..
-```
+</code>
+</pre>
 
 ## Example
 
 `Deduplicate` is a task which filters out unique numbers from a stream of integers.
 
 ```text
-task Deduplicate(): ~i32 -> ~i32 {
+task Deduplicate() ~i32 -> ~i32 {
     val unique: Set[i32] = Set();
     on event => if event not in unique {
         unique.add(event);

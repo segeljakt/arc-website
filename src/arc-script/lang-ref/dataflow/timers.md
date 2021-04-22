@@ -2,27 +2,29 @@
 
 A **timer** is an internal port which can be *scheduled* to receive an event *after* a specified duration.
 
-```text
+<pre>
+<code>
 Value ::=
-  | Value 'after' Value
+  | Value <'after'> Value
   | ..
 
 Type ::=
-  | Type 'after' Type
+  | Type <'after'> Type
   | ..
 
 Pattern ::=
-  | Pattern 'after' Pattern
+  | Pattern <'after'> Pattern
   | ..
 
 Expr ::=
-  | Expr 'after' Expr  # Associate an expression with a duration
-  | 'trigger' Expr     # Schedule timer
+  | Expr <'after'> Expr  # Associate an expression with a duration
+  | <'trigger'> Expr     # Schedule timer
   | ..
 
 TaskItem ::=
-  | 'port' Name ( '(' Type ')' )? ';'  # Internal port
-```
+  | <'port'> Name ( <'('> Type <')'> )? <';'>  # Internal port
+</code>
+</pre>
 
 ## Semantics
 

@@ -2,9 +2,10 @@
 
 A **module** is a named unit of encapsulation which may contain items and other modules.
 
-```text
-Module ::= 'mod' Name '{' (Item | Module)+ '}'
-```
+<pre>
+<code>Module ::= <'mod'> Name <'{'> (Item | Module)+ <'}'>
+</code>
+</pre>
 
 Modules form a hierarchy through nesting. This hierarchy is in addition tied to the file system hierarchy (similar to Rust):
 

@@ -2,9 +2,10 @@
 
 A **task** is an asynchronous first-order function over *asynchronous values* (i.e., streams or futures). Internally, a task is implemented as an *actor* which operates incrementally (per-event) over its streams and futures. Each task has an input and output *interface* of *ports* which streams can connect to. Tasks *receive* and *process* one event from one input port at a time. While processing, the task may *emit* multiple events at multiple output ports. Additional extensions to tasks are described in following sections.
 
-```text
+<pre>
+<code>
 Item ::=
-  | 'task' Name '(' (Name ':' Type ',')+ ')' ':' Interface '->' Interface '{' TaskItem* '}'
+  | <'task'> Name <'('> (Name <':'> Type <','>)+ <')'> <':'> Interface <'->'> Interface <'{'> TaskItem* <'}'>
   | ..
 
 Interface ::=
@@ -12,16 +13,17 @@ Interface ::=
   | ..
 
 TaskItem ::=
-  | 'on' '{' (Pattern ('if' Expr)? '=>' Expr ',')* (Control ',')* '}'  # Event handler
+  | <'on'> <'{'> (Pattern (<'if'> Expr)? <'=>'> Expr <','>)* (Control <','>)* <'}'>  # Event handler
   | ..
 
 Control ::=
   | ..  # Handler for special control-events
 
 Expr ::=
-  | 'emit' Expr  # Emit event to output port
+  | <'emit'> Expr  # Emit event to output port
   | ..
-```
+</code>
+</pre>
 
 ## Example 1
 

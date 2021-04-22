@@ -2,16 +2,17 @@
 
 A **pattern** is a syntactic construct for deconstructing a **value** and binding its parts to variables.
 
-```text
-Pattern ::=
-  | Name                                # Variable binding
-  | Literal                             # Literal comparison
-  | '{' (Name (':' Pattern)? ',')+ '}'  # Record deconstruction
-  | '(' (Pattern ',')+ ')'              # Tuple deconstruction
-  | Pattern? '..' ('='? Pattern)?       # Range deconstruction
-  | Path '(' Pattern ')'                # Variant deconstruction
-  | Pattern 'or' Pattern                # Alternation
-```
+<pre>
+<code>Pattern ::=
+  | Name                        # Variable binding
+  | Literal                     # Literal comparison
+  | <'{'> (Name (<':'> Pattern)? <','>)+ <'}'>  # Record deconstruction
+  | <'('> (Pattern <','>)+ <')'>            # Tuple deconstruction
+  | Pattern? <'..'> (<'='>? Pattern)?   # Range deconstruction
+  | Path <'('> Pattern <')'>            # Variant deconstruction
+  | Pattern <'or'> Pattern          # Alternation
+</code>
+</pre>
 
 ## Example
 

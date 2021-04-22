@@ -2,15 +2,16 @@
 
 An **enum** is a nominal type which is a disjoint set (tagged union) of values. Each item of the disjoint set is referred to as a **variant**.
 
-```text
-Item ::=
-  | 'enum' Name '{' (Name '(' Type ')' ',')* '}' # Enumerated type (Sum-type)
+<pre>
+<code>Item ::=
+  | <'enum'> Name <'{'> (Name <'('> Type <')'> <','>)* <'}'> # Enumerated type (Sum-type)
   | ...
 
 Expr ::=
-  | Path '(' Expr ')'  # Enum-variant consruction
+  | Path <'('> Expr <')'>  # Enum-variant consruction
   | ...
-```
+</code>
+</pre>
 
 ## Examples
 

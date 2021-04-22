@@ -43,7 +43,12 @@
 
         <!-- Custom theme stylesheets -->
         
+        <link rel="stylesheet" href="../../../style.css">
+        
 
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         
     </head>
     <body>
@@ -95,7 +100,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../arc-script/doc.html">Arc-Script - Version 0.0.1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/problem-motivation.html">Problem and Motivation</a></li><li class="chapter-item expanded "><a href="../../../arc-script/getting-started.html">Getting Started</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref.html">Language Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/BNF.html">BNF</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/concepts.html">Base Language Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/names.html">Names</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/paths.html">Paths</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/modules.html">Modules</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/values.html">Values</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/literals.html">Literals</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/types.html">Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/scalars.html">Scalars</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/exprs.html" class="active">Expressions</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/patterns.html">Patterns</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/items.html">Items</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/globals.html">Globals</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/funs.html">Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/exceptions.html">Exception handling</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/type-aliases.html">Type Aliases</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/extern-funs.html">Extern Functions</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/extern-types.html">Extern Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/uses.html">Imports</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/enums.html">Enums</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/nominal-types.html">Nominal Types</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/keywords.html">Keywords</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/concepts.html">Dataflow Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/async-values.html">Asynchronous Values</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/streams.html">Streams</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/events.html">Events</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/futures.html">Futures</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/datetimes.html">Datetimes</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/durations.html">Durations</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/tasks.html">Tasks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/state.html">State</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/cells.html">Cells</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/sets.html">Sets</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/dictionaries.html">Dictionaries</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/appenders.html">Appenders</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/ports.html">Ports</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/timers.html">Timers</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/timeouts.html">Timeouts</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/termination.html">Termination</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/keys.html">Keys</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/pipelines.html">Pipelines</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/piping-operator.html">Piping Operator</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/collections/concepts.html">Collection Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/collections/streamable.html">Streamable Sources</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/collections/streamable.html">Collectable Sinks</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/discussion.html">Discussion</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-mlir/lang-ref.html">Arc-MLIR</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../algorithms/algorithms.html">Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../algorithms/signal-smoothing.html">Signal Smoothing</a></li><li class="chapter-item expanded "><a href="../../../algorithms/peak-detection.html">Peak Detection</a></li><li class="chapter-item expanded "><a href="../../../algorithms/reservoir-sampling.html">Reservoir Sampling</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/doc.html">Arc-Script - Version 0.0.1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/problem-motivation.html">Problem and Motivation</a></li><li class="chapter-item expanded "><a href="../../../arc-script/getting-started.html">Getting Started</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref.html">Language Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/BNF.html">BNF</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/concepts.html">Base Language Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/names.html">Names</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/paths.html">Paths</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/modules.html">Modules</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/values.html">Values</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/literals.html">Literals</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/types.html">Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/scalars.html">Scalars</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/exprs.html" class="active">Expressions</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/patterns.html">Patterns</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/items.html">Items</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/globals.html">Globals</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/funs.html">Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/exceptions.html">Exception handling</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/type-aliases.html">Type Aliases</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/extern-funs.html">Extern Functions</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/extern-types.html">Extern Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/uses.html">Imports</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/enums.html">Enums</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/base/nominal-types.html">Nominal Types</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/keywords.html">Keywords</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/concepts.html">Dataflow Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/async-values.html">Asynchronous Values</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/streams.html">Streams</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/events.html">Events</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/futures.html">Futures</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/datetimes.html">Datetimes</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/durations.html">Durations</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/tasks.html">Tasks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/state.html">State</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/cells.html">Cells</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/sets.html">Sets</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/dictionaries.html">Dictionaries</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/appenders.html">Appenders</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/ports.html">Ports</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/timers.html">Timers</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/timeouts.html">Timeouts</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/termination.html">Termination</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/keys.html">Keys</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/pipelines.html">Pipelines</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/dataflow/piping-operator.html">Piping Operator</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/collections/concepts.html">Collection Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/collections/streamable.html">Streamable Sources</a></li><li class="chapter-item expanded "><a href="../../../arc-script/lang-ref/collections/streamable.html">Collectable Sinks</a></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-script/discussion.html">Discussion</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../arc-mlir/lang-ref.html">Arc-MLIR</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -165,41 +170,44 @@
                     <main>
                         <h1><a class="header" href="#expressions" id="expressions">Expressions</a></h1>
 <p>An <strong>expression</strong> is syntactic construct which can be evaluated into a <strong>value</strong>. Evaluation is always <em>eager</em>.</p>
-<pre><code class="language-text">Expr ::=
-  | Name                                                       # Variable reference
-  | Path                                                       # Item reference
-  | Literal                                                    # Literal
-  | '{' (Name ':' Expr ',' )+ '}'                              # Record-construction
-  | '(' (Expr',')+ ')'                                         # Tuple-construction
-  | Expr? '..' ('='? Expr)?                                    # Range-construction
-  | Expr BinOp Expr                                            # Binary operation
-  | 'var' Pattern (':' Type)? '=' Expr                         # Mutable-binding
-  | 'val' Pattern (':' Type)? '=' Expr                         # Immutable-binding
-  | 'if' Expr '{' Expr '}' ('else' '{' Expr '}')?              # If-else-expression
-  | 'match' Expr '{' (Pattern ('if' Expr)? '=&gt;' Expr ',')+ '}' # Match-expression
-  | 'for' Pattern 'in' Expr '{' Expr '}'                       # For-loop
-  | 'while' Expr '{' Expr '}'                                  # While-loop
-  | 'loop' '{' Expr '}'                                        # Infinite loop
-  | 'break' | 'continue' | 'return'                            # Control flow
-  | 'try' Expr 'catch' Pattern '=&gt;' Expr ('finally' Expr)?     # Exceptions
-  | '[' Expr 'for' Pattern 'in' Expr ('if' Expr)* ']'          # Comprehension
-  | 'fun' '(' (Pattern ':' Type ',')+ ')' ':' Expr             # Lambda construction
-  | '-' Expr                                                   # Negation
-  | 'not' Expr                                                 # Logical
-  | Expr '(' (Expr ',')* ')'                                   # Function call
-  | Path '(' Expr ')'                                          # Enum-variant construction
-  | Expr '.' Name                                              # Field projection
-  | Expr '.' [0-9]+                                            # Index projection
-  | Expr 'as' Type                                             # Type cast
-
-</code></pre>
+<pre>
+<code>Expr ::=
+  | Name                                            # Variable reference
+  | Path                                            # Item reference
+  | Literal                                         # Literal
+  | <b>{</b> (Name <b>:</b> Expr <b>,</b> )+ <b>}</b>                           # Record-construction
+  | <b>(</b> (Expr<b>,</b>)+ <b>)</b>                                    # Tuple-construction
+  | Expr? <b>..</b> (<b>=</b>? Expr)?                             # Range-construction
+  | Expr BinOp Expr                                 # Binary operation
+  | <b>var</b> Pattern (<b>:</b> Type)? <b>=</b> Expr                    # Mutable-binding
+  | <b>val</b> Pattern (<b>:</b> Type)? <b>=</b> Expr                    # Immutable-binding
+  | <b>if</b> Expr <b>{</b> Expr <b>}</b> (<b>else</b> <b>{</b> Expr <b>}</b>)?               # If-else-expression
+  | <b>match</b> Expr <b>{</b> (Pattern (<b>if</b> Expr)? <b>=></b> Expr <b>,</b>)+ <b>}</b>  # Match-expression
+  | <b>for</b> Pattern <b>in</b> Expr <b>{</b> Expr <b>}</b>                    # For-loop
+  | <b>while</b> Expr <b>{</b> Expr <b>}</b>                             # While-loop
+  | <b>loop</b> <b>{</b> Expr <b>}</b>                                   # Infinite loop
+  | <b>break</b> | <b>continue</b> | <b>return</b>                       # Control flow
+  | <b>try</b> Expr <b>catch</b> Pattern <b>=></b> Expr (<b>finally</b> Expr)?  # Exceptions
+  | <b>[</b> Expr <b>for</b> Pattern <b>in</b> Expr (<b>if</b> Expr)* <b>]</b>         # Comprehension
+  | <b>fun</b> <b>(</b> (Pattern <b>:</b> Type <b>,</b>)+ <b>)</b> <b>:</b> Expr              # Lambda construction
+  | <b>-</b> Expr                                          # Negation
+  | <b>not</b> Expr                                        # Logical
+  | Expr <b>(</b> (Expr <b>,</b>)* <b>)</b>                              # Function call
+  | Path <b>(</b> Expr <b>)</b>                                   # Enum-variant construction
+  | Expr <b>.</b> Name                                     # Field projection
+  | Expr <b>.</b> [0-9]+                                   # Index projection
+  | Expr <b>as</b> Type                                    # Type cast
+  | Expr <b>;</b> Expr                                     # Sequential composition
+</code>
+</pre>
 <p>The binary operators are as follows:</p>
-<pre><code class="language-text">BinOp ::=
-  | '+'   | '-'  | '*'   | '/'    | '**'  | '%'     # Arithmetic 
-  | '=='  | '!=' | '&lt;'   | '&gt;'    | '&lt;='  | '&gt;='    # Equality and Relational
-  | 'and' | 'or' | 'xor' | 'band' | 'bor' | 'bxor'  # Logical and Bitwise
-  | ';'                                             # Sequential composition
-</code></pre>
+<pre>
+<code>BinOp ::=
+  | <b>+</b>   | <b>-</b>  | <b>*</b>   | <b>/</b>    | <b>**</b>  | <b>%</b>     # Arithmetic
+  | <b>==</b>  | <b>!=</b> |<b> < </b>  |<b> > </b>   |<b> <= </b> |<b> >= </b>   # Equality and Relational
+  | <b>and</b> | <b>or</b> | <b>xor</b> | <b>band</b> | <b>bor</b> | <b>bxor</b>  # Logical and Bitwise
+</code>
+</pre>
 
                     </main>
 
